@@ -1,13 +1,15 @@
 import numpy as np
 from tkinter import *
+import matplotlib.pyplot as plt
 
-root = Tk()
+# root = Tk()
 
 
-myLabel = Label(root, text="Root test")
-myLabel.pack()
 
-root.mainloop()
+# myLabel = Label(root, text="Root test")
+# myLabel.pack()
+
+# root.mainloop()
 
 
 def consoleMultiplyOperator():
@@ -21,9 +23,10 @@ def consoleMultiplyOperator():
     for n in matrix_a:
         print(n)
     #the number of columns of first matrix is equal to the number of rows of second matrix
-    column_b = int(input("Enter the Number of Columns for the second matrix: "))
+    # column_b = int(input("Enter the Number of Columns for the second matrix: "))
+    column_b = 1
 
-    print("Enter the elements of Second Matrix:")
+    print("Enter the elements of Second Matrix (column for matrix B = 1): ")
 
     matrix_b= [[int(input()) for i in range(column_b)] for i in range(column_a)]
     for n in matrix_b:
@@ -38,5 +41,7 @@ def consoleMultiplyOperator():
     print("\nMatrix_a X Matrix_b is: ")
     for r in result:
         print(r)
+        plt.plot(r, marker="o", markersize=10)
+    plt.show()
 
 consoleMultiplyOperator()
