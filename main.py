@@ -1,6 +1,3 @@
-from cProfile import label
-import string
-from cv2 import CAP_PROP_XI_TEST_PATTERN_GENERATOR_SELECTOR
 import numpy as np
 from tkinter import *
 import matplotlib.pyplot as plt
